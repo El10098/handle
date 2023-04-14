@@ -3,9 +3,9 @@ let JSONData = {
   titolo: "Test",
   fasce: [
     {
-      titolo: "string",
+      titolo: "Giovanni",
       type: "hero",
-      imgUrl: "string",
+      imgUrl: URL('/src_images/calceolariaMobile.jpg'),
       sottotitolo: "string"
     },
     {
@@ -13,22 +13,22 @@ let JSONData = {
       titolo: "string",
       elencoCard: [
         {
-          titolo: "string",
+          titolo: "BO",
           imgUrl: "string",
           description: "string"
         },
         {
-          titolo: "string",
+          titolo: "vediamo",
           imgUrl: "string",
           description: "string"
         },
         {
-          titolo: "string",
+          titolo: "come",
           imgUrl: "string",
           description: "string"
         },
         {
-          titolo: "string",
+          titolo: "procede",
           imgUrl: "string",
           description: "string"
         },
@@ -42,6 +42,11 @@ let JSONData = {
   ],
 };
 
+Handlebars.registerHelper("eq", (params1, params2) => {
+  return params1 === params2;
+});
+
+
 //Faccio una fetch API del file hbs 
 fetch('./card.hbs').then(async (data) => {
   let templateText = await data.text();
@@ -50,5 +55,9 @@ fetch('./card.hbs').then(async (data) => {
   //Metto i dati su compiled template
   let outputHTML = compiledTemplate(JSONData);
   console.log(outputHTML);
+  console.log("Io funziono");
   document.querySelector('#container').innerHTML = outputHTML;
 });
+
+
+

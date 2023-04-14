@@ -1,56 +1,22 @@
-<div id="container">
-    <div class="card" style="width: 18rem;">
-        <img src="/assets/src_images/calceolaria.jpeg" class="card-img-top" alt="calc">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+<div>
+  {{#each fasce}}
+    {{! if non fa comparazioni mi registro una funzione eq e gli passo i parametri }}
+    {{#if (eq type "slider")}}
+      {{#each elencoCard}}
+        <div class="card">
+          <div class="card-img-top" alt="calc">
+            {{imgUrl}}
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">
+              {{titolo}}
+            </h5>
+            <p class="card-text">
+              {{description}}
+            </p>
+          </div>
         </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img src="/assets/src_images/calceolaria.jpeg" class="card-img-top" alt="calc">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img src="/assets/src_images/calceolaria.jpeg" class="card-img-top" alt="calc">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img src="/assets/src_images/calceolaria.jpeg" class="card-img-top" alt="calc">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img src="/assets/src_images/calceolaria.jpeg" class="card-img-top" alt="calc">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img src="/assets/src_images/calceolaria.jpeg" class="card-img-top" alt="calc">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
+      {{/each}}
+    {{/if}}
+  {{/each}}
 </div>
